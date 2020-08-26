@@ -11,5 +11,10 @@ Add to package.json
 
 heroku create github-resume-project
 git remote add heroku https://git.heroku.com/github-resume-project.git
+
+Add buildpacks inside Heroku project setting:
+  https://buildpack-registry.s3.amazonaws.com/buildpacks/mars/create-react-app.tgz
+
+
 git push heroku master
 heroku open --app github-resume-project
