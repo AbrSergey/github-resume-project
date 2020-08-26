@@ -5,6 +5,10 @@ Add to package.json
     "npm": "6.14.4"
   },
 
+ "scripts": {
+   "heroku-postbuild": "npm run build"
+ }
+
 heroku create github-resume-project
 git remote add heroku https://git.heroku.com/github-resume-project.git
 git push heroku master
