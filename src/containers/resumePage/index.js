@@ -13,17 +13,25 @@ class ResumePage extends Component {
     super(props);
     this.state = {
       isTokenPresented: localStorage.getItem('isTokenPresented') === 'true',
-      darkTheme: false
+      darkTheme: localStorage.getItem('darkTheme') === 'true'
     };
 
     this.toggleTheme = () => {
+      const darkTheme = this.state.darkTheme;
+
       this.setState(state => ({
         darkTheme: !state.darkTheme
       }));
+
+      localStorage.setItem('darkTheme', !darkTheme);
     }
   }
 
   async componentDidMount() {
+    if (localStorage.getItem('darkTheme') === null){
+      localStorage.setItem('darkTheme', false);
+    };
+
     await Promise.all([
       this.props.skillsGetAction(),
       this.props.educationGetAction(),

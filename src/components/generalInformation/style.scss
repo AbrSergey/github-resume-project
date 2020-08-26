@@ -10,7 +10,7 @@
   }
 }
 
-.general-information-card[theme="dark"] {
+.dark .general-information-card {
   background: $bgCardColor;
 }
 
@@ -39,13 +39,14 @@
   background-color: $greenColorThemeLight;
   color: #ffffff;
   width: 140px;
+  height: 30px;
   position: relative;
   padding: 5px 10px;
   margin-bottom: 1rem;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
-.hello[theme="dark"] {
+.dark .hello {
   box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
 }
 
@@ -65,7 +66,7 @@
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
-.whoami[theme="dark"] {
+.dark .whoami {
   color: #ffffff;
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.753);
 }
@@ -75,7 +76,7 @@
   font-size: inherit;
 }
 
-.whoami[theme="dark"] > span {
+.dark .whoami > span {
   color: $greenColorThemeLight;
 }
 
@@ -84,7 +85,7 @@
   color: #636363;
 }
 
-.work-position[theme="dark"] {
+.dark .work-position {
   color: #ffffff;
   box-shadow: none;
 }

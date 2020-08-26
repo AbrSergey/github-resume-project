@@ -30,8 +30,6 @@ export default {
       try {
         this.fetching();
         const { data } = await educationGet(payload);
-        console.log("12312312313")
-        console.log(data)
         this.succeed(data);
       } catch(err) {
         this.failed(err);

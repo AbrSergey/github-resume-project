@@ -10,7 +10,7 @@
   }
 }
 
-.skills-card[theme="dark"] {
+.dark .skills-card {
   background: $bgCardColor;
 }
 
@@ -28,7 +28,7 @@
   color: #636363;
 }
 
-.skills-card-description[theme="dark"] p {
+.dark .skills-card-description p {
   color: #ffffff;
 }
 

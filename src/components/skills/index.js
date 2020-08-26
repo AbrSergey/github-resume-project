@@ -8,32 +8,22 @@ import './style.scss';
 
 const Main = ({ data, text, loading, error  }) => {
   return (
-    <ThemeConsumer>
-      {
-        ({ darkTheme }) => {
-          const theme = darkTheme ? "dark" : "light";
-
-          return (
-            <Card>
-              <div className="skills-card" theme={theme}>
-                { loading ? <Spinner/> :
-                  <>
-                    <div className="skills-card-description" theme={theme}>
-                    <p>{text}</p>
-                    </div>
-                    <div className="skills-progress">
-                      {
-                        data.map(({ name, percent }) => (<SkillProgress key={name} name={name} percent={percent}/>))
-                      }
-                    </div>
-                  </>
-                }
-              </div>
-            </Card>
-          )
+    <Card>
+      <div className="skills-card">
+        { loading ? <Spinner/> :
+          <>
+            <div className="skills-card-description">
+            <p>{text}</p>
+            </div>
+            <div className="skills-progress">
+              {
+                data.map(({ name, percent }) => (<SkillProgress key={name} name={name} percent={percent}/>))
+              }
+            </div>
+          </>
         }
-      }
-    </ThemeConsumer>
+      </div>
+    </Card>
   )
 };
 

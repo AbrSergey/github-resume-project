@@ -1,7 +1,6 @@
 import React from 'react';
 import EducationContent from '../educationContent';
 import Spinner from '../spinner';
-import { ThemeConsumer } from '../themeContext';
  
 import './style.scss';
 
@@ -13,25 +12,15 @@ const Education = ({ data, loading, error }) => {
   for (let i = 0; i < leftLength; i++) educationCardLeft.push(educationCardRight.shift());
 
   return (
-    <ThemeConsumer>
-      {
-        ({ darkTheme }) => {
-          const theme = darkTheme ? "dark" : "light";
-
-          return (
-            <div className="education-layout">
-              { loading ? <Spinner/> :
-                <>
-                  <EducationContent educations={educationCardLeft} position="left"/>
-                  <div className="vertical-line" theme={theme}/>
-                  <EducationContent educations={educationCardRight} position="right"/>
-                </>
-              }
-            </div>
-          )
-        }
+    <div className="education-layout">
+      { loading ? <Spinner/> :
+        <>
+          <EducationContent educations={educationCardLeft} position="left"/>
+          <div className="vertical-line"/>
+          <EducationContent educations={educationCardRight} position="right"/>
+        </>
       }
-    </ThemeConsumer>
+    </div>
   )
 };
 

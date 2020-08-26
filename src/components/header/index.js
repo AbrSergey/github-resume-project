@@ -11,10 +11,8 @@ const Header = ({ socialLinkData, loading, name, company }) => {
   return (
     <ThemeConsumer>
       { ({ darkTheme, toggleTheme }) => {
-          const theme = darkTheme ? "dark" : "light";
-
           return (
-            <header theme={theme}>
+            <header>
               <div className="header-content-data">
                 <h1 className="person-name">{name}</h1>
                 <h3 className="speciality">{company}</h3>

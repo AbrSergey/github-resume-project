@@ -11,7 +11,7 @@
   box-shadow: 2px 7px 10px #000000;
 }
 
-.fab[theme="dark"] {
+.dark .fab {
   background-color: #5f5e5e;
 }
 
@@ -19,7 +19,7 @@
   background-color: #0eb5ff;
 }
 
-.fab[theme="dark"]:hover {
+.dark .fab:hover {
   background-color: $greenColorThemeLight;
 }
 
@@ -27,7 +27,7 @@
   box-shadow: 2px 0px 10px #000000;
 }
 
-.fab[theme="dark"]:active {
+.dark .fab:active {
   background-color: #0eb5ff;
 }
 
