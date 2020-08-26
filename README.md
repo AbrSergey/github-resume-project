@@ -18,6 +18,15 @@ npm install
 
 npm start
 
+Env:
+
+- BACKEND_HOST
+- GITHUB_AUTH_URL
+- GITHUB_CLIENT_ID
+- GITHUB_CLIENT_SECRET
+- GITHUB_REDIRECT_URL
+- GITHUB_BASE_URL
+
 ### Build
 
 npm build
