@@ -1,0 +1,36 @@
+@import "../../sass/var.scss";
+
+.fab {
+  font-size: 2.2rem;
+  color: #ffffff;
+  background-color: $greenColorThemeLight;
+  margin: 1rem;
+  padding: 0.5rem;
+  outline: none;
+  border-radius: 50%;
+  box-shadow: 2px 7px 10px #000000;
+}
+
+.fab[theme="dark"] {
+  background-color: #5f5e5e;
+}
+
+.fab:hover {
+  background-color: #0eb5ff;
+}
+
+.fab[theme="dark"]:hover {
+  background-color: $greenColorThemeLight;
+}
+
+.fab:active {
+  box-shadow: 2px 0px 10px #000000;
+}
+
+.fab[theme="dark"]:active {
+  background-color: #0eb5ff;
+}
+
+.header-icon {
+  text-decoration: none;
+}

@@ -1,0 +1,14 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/var.scss";
+
+.avatar {
+  display: inline-block;
+  object-fit: cover;
+  width: 30%;
+  object-position: top;
+
+  @include media($phone) {
+    width: 100vw;
+    margin: 0 auto;
+  }
+}

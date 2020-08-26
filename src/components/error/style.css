@@ -1,0 +1,14 @@
+.token-error {
+  font-size: 3rem;
+  color: red;
+  width: 70vw;
+  margin: 0 auto;
+  margin-top: 30vh;
+  text-align: center;
+}
+
+.token-error > span {
+  display: inline-block;
+  font-size: 2rem;
+  color: rgb(167, 14, 14);
+}

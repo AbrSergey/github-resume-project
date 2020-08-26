@@ -1,0 +1,12 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/var.scss";
+
+.education-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include media($desktop) {
+    flex-direction: row;
+  }
+}

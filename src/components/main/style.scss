@@ -1,0 +1,20 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/var.scss";
+
+.main {
+  margin: 0 auto;
+  width: 70vw;
+  top: 25vh;
+  margin: 0 auto;
+  margin-top: -20vh;
+
+  @include media($desktop) {
+    width: 100vw;
+    max-width: 100%;
+    margin-top: -10vh;
+  }
+
+  @include media($phone) {
+    margin-top: -20vh;
+  }
+}

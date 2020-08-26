@@ -1,0 +1,14 @@
+@import "../../sass/var.scss";
+
+.title-name {
+  color: $greenColorThemeLight;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  margin: 7rem;
+  text-transform: uppercase;
+}
+
+.title-name[theme="dark"] {
+  color: #ffffff;
+}

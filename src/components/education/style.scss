@@ -1,0 +1,27 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/var.scss";
+
+.education-layout {
+  height: 100rem;
+  display: flex;
+  justify-content: space-between;
+
+  @include media($desktop) {
+    flex-direction: column;
+    justify-content: start;
+  }
+}
+
+.vertical-line {
+  border-left: 6px solid #ffffff;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  @include media($desktop) {
+    display: none;
+  }
+}
+
+.vertical-line[theme="dark"] {
+  border-left: 6px solid $bgCardColor;
+}

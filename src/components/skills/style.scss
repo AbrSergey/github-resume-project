@@ -1,0 +1,46 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/var.scss";
+
+.skills-card {
+  background: #ffffff;
+  display: flex;
+
+  @include media($phone) {
+    flex-direction: column;
+  }
+}
+
+.skills-card[theme="dark"] {
+  background: $bgCardColor;
+}
+
+.skills-card-description {
+  width: 50%;
+
+  @include media($phone) {
+    pwidth: 100vw;
+  }
+}
+
+.skills-card-description p {
+  font-size: 1.7rem;
+  padding: 0.5rem 4rem 4rem 4rem;
+  color: #636363;
+}
+
+.skills-card-description[theme="dark"] p {
+  color: #ffffff;
+}
+
+.skills-card-description p:nth-child(1) {
+  padding-top: 5rem;
+}
+
+.skills-progress {
+  width: 50%;
+  padding: 5rem;
+
+  @include media($phone) {
+    width: 85vw;
+  }
+}

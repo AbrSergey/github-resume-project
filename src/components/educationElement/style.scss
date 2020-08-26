@@ -1,0 +1,133 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/var.scss";
+
+.education-card {
+  width: 30vw;
+  min-height: 25rem;
+  background-color: #ffffff;
+  position: relative;
+  margin-bottom: 6rem;
+  padding: 4rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0px 0px 4px #686868;
+}
+
+.education-card[theme="dark"] {
+  background-color: $bgCardColor;
+}
+
+.education-card-left::before {
+  content: "";
+  position: absolute;
+  top: 3em;
+  right: -4em;
+  height: 0;
+  border: 20px solid transparent;
+  border-left: 20px solid #ffffff;
+
+  @include media($desktop) {
+    content: none;
+  }
+}
+
+.education-card-left[theme="dark"]::before {
+  border-left: 20px solid $bgCardColor;
+}
+
+.education-card-left::after {
+  content: "";
+  position: absolute;
+  top: 3em;
+  right: -83px;
+  border: 1.5rem solid #0eb57d;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+  background: radial-gradient(gold, orangered);
+
+  @include media($desktop) {
+    content: none;
+  }
+}
+
+.education-card-right::before {
+  content: "";
+  position: absolute;
+  top: 3em;
+  left: -83px;
+  border: 1.5rem solid #0eb57d;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+
+  @include media($desktop) {
+    content: none;
+  }
+}
+
+.education-card-right::after {
+  content: "";
+  position: absolute;
+  top: 3em;
+  left: -4em;
+  height: 0;
+  border: 20px solid transparent;
+  border-right: 20px solid #ffffff;
+
+  @include media($desktop) {
+    content: none;
+  }
+}
+
+.education-card-right[theme="dark"]::after {
+  border-right: 20px solid $bgCardColor;
+}
+
+.education-card-right:nth-child(1) {
+  margin-top: 6rem;
+
+  @include media($desktop) {
+    margin-top: 0;
+  }
+}
+
+.education-name {
+  color: #05b479;
+  font-size: 2.2rem;
+}
+
+.education-place {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #3a3a3a;
+}
+
+.education-place[theme="dark"] {
+  color: #ffffff;
+}
+
+.education-period {
+  background-color: $greenColorThemeLight;
+  color: #ffffff;
+  font-size: 1.5rem;
+  width: 8rem;
+  padding: 1rem 1.5rem;
+  position: relative;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.education-period::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 6em;
+  height: 0;
+  border: 10px solid transparent;
+  border-right: 10px solid $greenColorThemeLight;
+  border-bottom: 10px solid $greenColorThemeLight;
+
+  @include media($desktop) {
+    content: none;
+  }
+}

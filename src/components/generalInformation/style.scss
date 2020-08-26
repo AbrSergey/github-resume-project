@@ -1,0 +1,98 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/var.scss";
+
+.general-information-card {
+  display: flex;
+  background: #ffffff;
+
+  @include media($phone) {
+    flex-direction: column;
+  }
+}
+
+.general-information-card[theme="dark"] {
+  background: $bgCardColor;
+}
+
+.general-information {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include media($phone) {
+    width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+.general-information-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.hello {
+  font-size: 17px;
+  background-color: $greenColorThemeLight;
+  color: #ffffff;
+  width: 140px;
+  position: relative;
+  padding: 5px 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.hello[theme="dark"] {
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.hello::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 140px;
+  border: 10px solid transparent;
+  border-top: 10px solid $greenColorThemeLight;
+  border-right: 10px solid $greenColorThemeLight;
+}
+
+.whoami {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.whoami[theme="dark"] {
+  color: #ffffff;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.753);
+}
+
+.whoami > span {
+  color: $greenColorThemeLight;
+  font-size: inherit;
+}
+
+.whoami[theme="dark"] > span {
+  color: $greenColorThemeLight;
+}
+
+.work-position {
+  font-size: 2rem;
+  color: #636363;
+}
+
+.work-position[theme="dark"] {
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.work-position::after {
+  display: block;
+  content: "";
+  border-top: 2px solid #c6c4c4;
+  margin-bottom: 2.5rem;
+  margin-top: 2rem;
+}
