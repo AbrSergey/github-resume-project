@@ -1,12 +1,12 @@
 export default {
   backend: {
-    host: 'https://hh-test-backend.herokuapp.com'
+    host: process.env.BACKEND_HOST // 'https://hh-test-backend.herokuapp.com'
   },
   github: {
-    auth_url: 'https://github.com/login/oauth/authorize',
-    client_id: 'a6cd8fa21bbe119f11cc',
-    client_secret: '1e63dc7edd1a0eb3973bcb89f3bf56dd4bef4bb0',
-    redirect_url: 'http://localhost:3000/token',
-    base_url: 'https://api.github.com'
+    auth_url: process.env.GITHUB_AUTH_URL, //'https://github.com/login/oauth/authorize',
+    client_id: process.env.GITHUB_CLIENT_ID,
+    client_secret: process.env.GITHUB_CLIENT_SECRET,
+    redirect_url: process.env.GITHUB_REDIRECT_URL, //'http://localhost:3000/token',
+    base_url: process.env.GITHUB_BASE_URL //'https://api.github.com'
   }
 };
