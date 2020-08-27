@@ -8,6 +8,10 @@ import { ThemeConsumer } from '../themeContext';
 import './style.scss';
 
 const Header = ({ socialLinkData, loading, name, company }) => {
+  const onClickLogout = () => {
+    localStorage.clear();
+  }
+  
   return (
     <ThemeConsumer>
       { ({ darkTheme, toggleTheme }) => {
@@ -28,6 +32,10 @@ const Header = ({ socialLinkData, loading, name, company }) => {
                 <input type="checkbox" checked={darkTheme ? true : false} onChange={toggleTheme}/>
                 <span className="slider round"></span>
               </label>
+
+              <a className="button logout" onClick={onClickLogout} href="#">
+                <i class="fas fa-sign-out-alt"></i>
+              </a>
               
             </header>
           )}

@@ -54,12 +54,12 @@ class LoginPage extends Component {
     const { error } = this.state;
 
     return (
-      <div className="login-box">
+      <form className="login-box">
         <p>Please input your GitHub login</p>
         <input type="text" onChange={this.handleLoginChange}></input>
         { error && <p className="username-error">{error}</p> }
-        <button onClick={this.handleSubmit}>Sign In</button>
-      </div>
+        <button type="submit" onClick={this.handleSubmit}>Sign In</button>
+      </form>
     )
   }
 };
